@@ -1,0 +1,68 @@
+<h3>Genres</h3>
+
+
+<div class="Gen">
+    <button class="book1" type="button">All</button>
+    <button class="book1" type="button">Arts & Entertainment</button>
+    <button class="book1" type="button">Biographies & memoirs</button>
+    <button class="book1" type="button">Business & Investing</button>
+    <button class="book1" type="button">Children's books</button>
+    <button class="book1"type="button">Comics</button>
+    <button class="book1" type="button">Computers & technology</button>
+    <button class="book1" type="button">Fiction & literature</button>
+    <button class="book1" type="button">Health, mind and body</button>
+    <button class="book1" type="button">Mystery & thrillers</button>
+    <button class="book1"type="button">Religion & spirituality</button>
+    <button class="book1" type="button">Romance</button>
+    <button class="book1"type="button">Science fiction & fantasy</button>
+</div>
+<hr>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let book of books">
+      <div class="card">
+        <img [src]="book.img" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }} </h5>
+          <h6>Author: {{ book.author }}</h6>
+          <!-- <h6>Author:Tina Payne Bryson,Ph.D</h6> -->
+          <p class="card-text">{{ book.description }} </p>
+
+          <button class="btn-primary" (click)="bookFunc(book.id)">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col">
+      <div class="card">
+        <img src="assets\help-kids.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Help your kids with Computer Science</h5>
+          <h6>Author:Steven Carton</h6>
+          <h6>Author:Sophia MTT</h6>
+          <p class="card-text">A unique visual step by step guide to computers,coding, and communication</p>
+          <button class="btn-primary">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets\mother.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mother Teresa</h5>
+          <h6>Author:Meg Greene</h6>
+          <p class="card-text">A timeline highlights the most significant life events againsts a historical perspective.</p>
+          <button class="btn-primary">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets\child.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">How your child learns best</h5>
+          <h6>Author:Judy Willies,MD,MEd</h6>
+          <p class="card-text">Brain-Friendly strategies you can use to ignite your child's learning and increase school success.</p>
+          <button class="btn-primary">Book Now</button>
+        </div>
+      </div>
+    </div> -->
+  </div>
