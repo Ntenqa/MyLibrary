@@ -9,6 +9,7 @@
     border: 1px solid lightblue; 
 }
 .Gen{
+    justify-content: center;
     text-decoration: underline;
 }
 .card-img-top{

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { cartService } from 'src/app/cart.service';
+
 
 @Component({
   selector: 'app-header',
@@ -8,25 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public totalItem:number=0;
   public searchTerm:string='';
-  
-
- 
-  
-
-
-  constructor(
-    // private bookingService: bookingService
-    ) { }
+  constructor(private CartService:cartService) { }
 
   ngOnInit(): void {
-    // this.bookingService.getBook()
-    // .subscribe(res=>{
-    //   this.totalItem=res.length;
-    // })
+    this.CartService.getProduct()
+    .subscribe(res=>{
+      this.totalItem=res.length;
+    })
   }
   search(event:any){
-    // this.searchTerm=(event.target as HTMLInputElement).value;
-    // this.bookingService.search.next(this.searchTerm)
+    this.searchTerm=(event.target as HTMLInputElement).value;
+    this.CartService.search.next(this.searchTerm)
     
   }
 
